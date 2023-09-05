@@ -1,0 +1,23 @@
+html{
+    font-family: sans-serif;
+    text-align: justify;
+    background-color: #DA9;
+    padding: 4%;
+}
+#cont{
+    margin: -3%;
+    background-color: #FFF;
+    padding: 3%;
+    border-radius: 40px;
+    box-shadow: 0.5em 0.5em rgba(70, 59, 55, 0.384);
+
+}
+#embaixo{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    margin-bottom: -2%;
+}
+#banana{
+    width: 45%;
+}

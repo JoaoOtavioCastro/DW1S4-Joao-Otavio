@@ -1,0 +1,26 @@
+html{
+    text-align: justify;
+    font-family: sans-serif;
+    padding: 4%;
+    color: aliceblue;
+    background-color: #1f1f1f;
+}
+
+.cont{
+    display: flex;
+}
+.esq{
+    padding: 2% 2% 2% 2%;
+}
+.dir{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+}
+a{
+    color: antiquewhite;
+}
+mark{
+    background-color: #464646;
+    color: azure;
+}
