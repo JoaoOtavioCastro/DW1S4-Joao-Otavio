@@ -1,0 +1,119 @@
+#cin{
+    background-image: url(https://www.catzone.com.br/wp-content/uploads/2020/03/Gatinho-brincando.png);
+    background-color: darkgrey;
+    background-repeat: repeat;
+    background-size: 4%;
+    color: blue;
+}
+#gre{
+    background-color: rgba(122, 253, 122, 0.7);
+}
+#red{
+    background-color: lightcoral;
+}
+#body1{
+    background: lightblue url(https://www.catzone.com.br/wp-content/uploads/2020/03/Gatinho-brincando.png) no-repeat;
+    background-position:bottom right;
+    background-attachment: fixed;
+    background-size: 43%;
+}
+
+table{
+    border: 1px black solid;
+}
+table td{
+    border: 1px black solid;
+}
+table td, tr{
+    text-align: center;
+    width: 8em;
+    padding: 3%;
+}
+#tred{
+    background-color: red;
+    width: 15em;
+}
+#tb30000{
+    background-color: #b30000;
+}
+#t660000{
+    background-color: #660000;
+}
+#tgreen{
+    background-color: green;
+}
+#t99ff99{
+    background-color: #99ff99;
+}
+#t004d00{
+    background-color: #004d00;
+}
+#tblu{
+    background-color: blue;
+}
+#tccccff{
+    background-color: #ccccff;
+}
+#t000066{
+    background-color: #000066;
+}
+#main{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Instituto_Federal_de_S%C3%A3o_Paulo_-_Marca_Vertical_2015.svg/2383px-Instituto_Federal_de_S%C3%A3o_Paulo_-_Marca_Vertical_2015.svg.png);
+    background-attachment: fixed;
+    background-position: center right;
+    background-size: 15%;
+    background-repeat: no-repeat;
+}
+#body2{
+    background-image: url(https://static.vecteezy.com/system/resources/previews/011/665/089/non_2x/stylized-3d-color-palette-side-view-free-png.png);
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: 7%;
+    background-repeat: repeat-x;
+}
+
+#fotos{
+    display: flex;
+}
+.foto{
+    width: 25em;
+    height: 18em;
+    padding: 1%;
+    opacity: 0.4;
+}
+img:hover {
+    opacity: 1.0;
+  }  
+.linha{
+    background-color: green;
+}
+#sp2{
+    opacity: 0.8;
+}
+#sp3{
+    opacity: 0.6;
+}
+#sp4{
+    opacity: 0.4;
+}
+#sp5{
+    opacity: 0.2;
+}
+#sp6{
+    background-color: rgba(0, 128, 0, 0.8);
+}
+#sp7{
+    background-color: rgba(0, 128, 0, 0.6);
+}
+#sp8{
+    background-color: rgba(0, 128, 0, 0.4);
+}
+#sp9{
+    background-color: rgba(0, 128, 0, 0.2);
+}
+h2{
+    font-size: 2.5em;
+}
+h1{
+    font-size: 3.2em;
+}
