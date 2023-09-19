@@ -1,0 +1,21 @@
+body{
+    background-color: white;
+}
+.texto{
+    background-color: lightcyan;
+    border-bottom: 1vw solid salmon;
+    border-right: 3vw solid salmon;
+    text-indent: 2vw;
+}
+.foto{
+    border: dotted darkorchid 0.6vw;
+    width: 95%;
+    margin: 2vw;
+}
+.foto img{
+    border: double orchid 2vw;
+    width: 40vw;
+}
+figure{
+    margin: 0%
+}

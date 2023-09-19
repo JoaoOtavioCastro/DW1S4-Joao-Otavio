@@ -1,6 +1,6 @@
 
     // Array com os nomes das aulas
-    var aulas = ["Aula01", "Aula02", "Aula03", "Aula04"]; // Adicione quantas aulas você tiver
+    var aulas = ["Aula03", "Aula04", "Aula05", "Aula06", "Aula07", "Aula08", "Sabado"]; // Adicione quantas aulas você tiver
     const titulo = document.getElementById("enderec");
     const endereco = document.getElementById("endereco");
     // Inicializa o índice da aula atual
@@ -29,13 +29,19 @@
         var iframe = document.getElementById("iframe");
         var aulaName = aulas[currentIndex];
         iframe.src = "./" + aulaName + "/index.html";
-        titulo.textContent = "Aula " + (currentIndex + 1);
-        endereco.setAttribute(href="./" + aulaName + "/index.html")
+        titulo.textContent = aulas[currentIndex];
     }
 
     // Adiciona eventos de clique aos botões
     document.getElementById("leftButton").addEventListener("click", previousAula);
     document.getElementById("rightButton").addEventListener("click", nextAula);
+
+
+
+//    aulas.forEach(element => {
+  //  document.write("")
+//});
+
 
     // Inicializa o iframe com a primeira aula
     updateIframe();

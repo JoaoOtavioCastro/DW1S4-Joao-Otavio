@@ -1,0 +1,33 @@
+table,td{
+    border: solid 1px black;
+}
+
+#imge{
+    border-radius: 20px;
+    width: 60%;
+}
+*{
+    font-family: sans-serif;
+}
+.voltar{
+    width: 40px;
+}
+.ve{
+    background-color: green;
+}
+.vc{
+    background-color: lightgreen;
+}
+.cc{
+    background-color: grey;
+}
+.ce{
+    background-color: #333;
+}
+.pr{
+    background-color: black;
+}
+.es2{
+    background-color: black;
+    color: white;
+}

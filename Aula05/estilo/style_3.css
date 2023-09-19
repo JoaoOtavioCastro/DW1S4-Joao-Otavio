@@ -1,0 +1,47 @@
+table,td{
+    border: solid 1px black;
+}
+
+#imge{
+    border-radius: 20px;
+    width: 60%;
+}
+*{
+    font-family: sans-serif;
+}
+body{
+    background-color: rgb(148, 217, 230);
+}
+.e1{
+    text-align: center;
+    width: 50%;
+}
+.fred{
+    background-color: red;
+}
+.fgre{
+    background-color: green;
+}
+.fblu{
+    background-color: blue;
+}
+.fyel{
+    background-color: yellow;
+}
+#t1 td{
+    padding: 50px 70px 50px 70px;
+}
+#t1, #t1 td{
+    border: solid 1px red;
+    text-align: center;
+}
+#t2{
+    background-color: white;
+    border-color: red;
+}
+#t2 td{
+    border-color: red;
+}
+#t2 td, tr{
+    text-align: center;
+}

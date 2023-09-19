@@ -1,0 +1,45 @@
+h2{
+    font-family: 'lobster';
+    font-size: 3vw;
+}
+.lhama img{
+    padding: 0.5vw;
+}
+.pr{
+    border-top: solid 3vh;
+    border-bottom: solid 3vh;
+    margin-bottom: 2%;
+}
+.l1{
+text-align: start;
+background-color: lightgreen;
+border-color: darkblue;
+}
+.l2{
+text-align: end;
+background-color: salmon;
+border-color: brown;
+}
+.pr{
+    margin-left: 0%;
+    padding: 2%;
+}
+.t1{
+    width: 12vw;
+    height: 8vw;
+}
+.t2{
+    width: 17vw;
+    height: 12vw;
+}
+.t3{
+    width: 23vw;
+    height: 15vw;
+}
+.t4{
+    width: 28vw;
+    height: 18vw;
+}
+body{
+    background-color: white;
+}
