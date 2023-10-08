@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando 1- FlexBlox</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="prim">
+        <a href="index.html"><img src="https://cdn-icons-png.flaticon.com/512/93/93634.png" alt="" width="40vw"></a>
+        <h1>..::Meu layout de site com Flexbox::..</h1>
+        <br>
+    </div>
+    <div class="prim menu">
+        <a href="#" class="link">Inicio</a>
+        <a href="#" class="link">Sobre</a>
+        <a href="#" class="link">Produtos</a>
+        <a href="#" class="link">Contato</a>
+    </div>
+    <div class="prim corpo">
+        <div class="cor esq">
+            <h1>Corpo do site</h1>
+            <br>
+            <div id="cont">
+                <div class="num">
+                    <h1>1</h1>
+                    <p >One</p>
+                </div>
+                <div class="num">
+                    <h1>2</h1>
+                    <p >Two</p>
+                </div>
+                <div class="num">
+                    <h1>3</h1>
+                    <p >Tree</p>
+                </div>
+                <div class="num">
+                    <h1>4</h1>
+                    <p >Four</p>
+                </div>
+                <div class="num">
+                    <h1>5</h1>
+                    <p >Five</p>
+                </div>
+                <div class="num">
+                    <h1>6</h1>
+                    <p >Six</p>
+                </div>
+                <div class="num">
+                    <h1>7</h1>
+                    <p >Seven</p>
+                </div>
+                <div class="num">
+                    <h1>8</h1>
+                    <p >Eight</p>
+                </div>
+                <div class="num">
+                    <h1>9</h1>
+                    <p >Nine</p>
+                </div>
+                <div class="num">
+                    <h1>10</h1>
+                    <p >Ten</p>
+                </div>
+            </div>
+        </div>
+        <div class="cor dir">
+            <h1>Box Lateral</h1>
+            <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum reiciendis ullam
+                sapiente distinctio quas at. Quisquam mollitia sapiente enim at non inventore voluptatem quidem
+                doloribus nemo saepe. Molestiae, non at.
+                Maiores, provident eum velit et eius, tempora illum, similique officiis eligendi recusandae architecto
+                aspernatur earum sapiente error nam non aliquid vel quisquam reiciendis ad atque exercitationem!</p>
+        </div>
+    </div>
+
+    <div class="prim footer">
+        <p>Criado por João Otávio</p>
+        <p>jotaviocastro@gmail.com</p>
+    </div>
+
+    <style>
+        body {
+            background-color:rgb(178, 245, 182); 
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1vw;
+        }
+
+        .menu {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .prim {
+            display: flex;
+        }
+
+        .corpo {
+            background-color: white;
+            border-bottom: 0.3vw rgb(14, 165, 25) solid;
+            border-top: 0.3vw rgb(14, 165, 25) solid;
+            width: 101vw;
+            height: 37vw;
+            margin-top: 2vw;
+            margin-left: -1vw;
+        }
+
+        .esq {
+            padding-left: 2vw;
+            width: 75%;
+        }
+
+        .cor {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #cont {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+        }
+
+        .num {
+            display: flex;
+            flex-direction: column;
+            width: 10.8vw;
+            height: 7.5vw;
+            border: solid black 0.13vw;
+            justify-content: center;
+            align-items: center;
+            margin-right: 1vw;
+            margin-bottom: 1vw;
+            font-size: 1vw;
+        }
+
+        .dir {
+            display: flex;
+            flex-flow: column;
+            width: 25%;
+            align-items: center;
+            padding: 1vw;
+            border-left: 0.3vw rgb(14, 165, 25) solid;
+            line-height: 2vw;
+            text-indent: 2vw;
+            font-size: 0.9vw;
+            text-align: justify;
+        }
+        .dir h1{
+            font-weight:bold;
+        }
+        .num p{
+            margin-top: -0.3vw;
+            font-style: italic;
+        }
+        .footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Courier New';
+            font-weight: 500;
+        }
+
+        .footer p {
+            margin-bottom: -0.2vw;
+        }
+        a{
+            font-size: 1.3vw;
+        }
+    </style>
+</body>
+
+</html>
