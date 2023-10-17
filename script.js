@@ -1,4 +1,4 @@
-    var aulas = ["Aula03", "Aula04", "Sabado", "Aula05", "Aula06", "Aula07", "Aula08", "Aula09"];     
+    var aulas = ["Aula03", "Aula04", "Sabado", "Aula05", "Aula06", "Aula07", "Aula08", "Aula09", "Aula11"];     
     const titulo = document.getElementById("enderec");
     const endereco = document.getElementById("endereco");
     const lis = document.getElementById("lis")
