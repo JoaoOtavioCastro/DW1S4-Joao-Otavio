@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <title>Exemplo de formulário HTML</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
 </head>
-<body>
+
+<body class="bg-dark text-white">
+  <nav class="site-header sticky-top py-1">
+    <div class="container d-flex flex-column flex-md-row justify-content-around">
+
+      <a class="py-2 d-none d-md-inline-block" href="index.html">Você é um?</a>
+      <a class="py-2 d-none d-md-inline-block" href="album.html">Quem são?</a>
+      <a class="py-2 d-none d-md-inline-block" href="about.html">Nos ajude!</a>
+    </div>
+  </nav>
   <div class="container">
-    <h1>Exemplo de formulário HTML</h1>
-    <form action="/" method="post">
+    <h1 class="text-center">TRANSFORMERS</h1>
+    <h1>Veremos se você não é um transformer</h1>
+    <form>
       <div class="form-group">
         <label for="nome">Nome</label>
         <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
@@ -25,22 +36,22 @@
       </div>
 
       <div class="form-group">
-        <label for="url">URL</label>
-        <input type="url" class="form-control" id="url" placeholder="Digite sua URL">
+        <label for="url">Rede social</label>
+        <input type="url" class="form-control" id="url" placeholder="digite sua rede social preferida">
       </div>
 
       <div class="form-group">
-        <label for="numero">Número</label>
-        <input type="number" class="form-control" id="numero" placeholder="Digite um número">
+        <label for="numero">Quantos dedos você possúi?</label>
+        <input type="number" class="form-control" id="numero" placeholder="Digite a quantidade de dedos">
       </div>
 
       <div class="form-group">
-        <label for="data">Data</label>
+        <label for="data">Data de Nascimento</label>
         <input type="date" class="form-control" id="data">
       </div>
 
       <div class="form-group">
-        <label for="arquivo">Arquivo</label>
+        <label for="arquivo">Coloque aqui uma foto sua!</label>
         <input type="file" class="form-control" id="arquivo" accept="image/jpeg,image/png,image/gif">
       </div>
 
@@ -53,49 +64,104 @@
       </div>
 
       <div class="form-group">
-        <label for="descricao">Descrição</label>
+        <label for="descricao">Descreva seus gostos</label>
         <textarea class="form-control" id="descricao" rows="5"></textarea>
       </div>
 
       <div class="form-group">
         <input type="checkbox" id="aceita_termos" value="sim">
-        <label for="aceita_termos">Aceito os termos de uso</label>
+        <label for="aceita_termos">Não sou um robo</label>
       </div>
 
       <div class="form-group">
         <input type="checkbox" id="interesse_1" value="1">
-        <label for="interesse_1">Interesses 1</label>
+        <label for="interesse_1">tenho rodas</label>
 
         <input type="checkbox" id="interesse_2" value="2">
-        <label for="interesse_2">Interesses 2</label>
+        <label for="interesse_2">tenho retrovisor</label>
 
         <input type="checkbox" id="interesse_3" value="3">
-        <label for="interesse_3">Interesses 3</label>
+        <label for="interesse_3">tenho bancos de couro</label>
       </div>
 
-      <button type="submit" class="btn btn-primary">Enviar</button>
+      <button id="submit" type="button" class="btn btn-primary">Enviar</button>
 
       <button type="reset" class="btn btn-secondary">Limpar</button>
     </form>
   </div>
+  <!--
+    
+    Não consegui fazer funcionar :(
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
   <script>
-    const arquivo = document.querySelector("#arquivo");
+    const arquivoInput = document.querySelector("#arquivo");
+    const submitButton = document.querySelector("#submit");
 
-    const modelo = teachableMachine.loadModel("https://storage.googleapis.com/teachablemachine/models/image_classification/mobilenet_v1_1.0_224/model.json");
+    // Carregar o modelo da Teachable Machine localmente
+    async function loadModel() {
+      const modelURL = "./model.json";
+      const metadataURL = "./metadata.json";
+      const model = await tf.loadGraphModel(modelURL, { metadata: metadataURL });
+      return model;
+    }
 
-    arquivo.addEventListener("change", async () => {
-      if (arquivo.files.length > 0) {
-        const imagem = arquivo.files[0];
+    // Função para classificar a imagem
+    async function classificarImagem() {
+      const file = arquivoInput.files[0];
 
-        const resposta = await teachableMachine.predict(imagem);
-
-        const classes = resposta.classes;
-        const probabilidades = resposta.probabilities;
-
-        console.log(classes);
-        console.log(probabilidades);
+      if (!file) {
+        alert("Por favor, selecione um arquivo de imagem.");
+        return;
       }
-    });
+
+      
+      const model = await loadModel();
+      const image = document.createElement("img");
+      image.src = URL.createObjectURL(file);
+
+      // Redimensione a imagem, se necessário
+      // image.width = 224;
+      // image.height = 224;
+
+      const tensor = tf.browser.fromPixels(image);
+      const resized = tf.image.resizeBilinear(tensor, [224, 224]);
+      const batched = resized.reshape([1, 224, 224, 3]);
+
+      const predictions = await model.executeAsync({ image: batched });
+      const classIdx = predictions[0].argMax(1).dataSync()[0];
+
+      const classes = ["Pessoa", "Carro", "Eder"];
+      const className = classes[classIdx];
+
+      alert(`Classificação: ${className}`);
+    }
+
+    submitButton.onclick = classificarImagem;
   </script>
+  -->
+  <style>
+    .site-header {
+      background-color: rgba(0, 0, 0, .85);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      backdrop-filter: saturate(180%) blur(20px);
+    }
+
+    .site-header a {
+      color: #999;
+      transition: ease-in-out color .15s;
+    }
+
+    .site-header a:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .container{
+      padding: 2vw;
+      line-height: 3.5vw;
+    }
+  </style>
 </body>
 </html>
