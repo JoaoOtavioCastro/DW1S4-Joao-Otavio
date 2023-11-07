@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="index.html"><img src="https://cdn-icons-png.flaticon.com/512/93/93634.png" alt="" width="40vw"></a>
+    <div class="container">
+        <form class="d-flex form-group flex-column">
+            <div class="d-flex">
+                <div class="d-flex flex-column p-3">
+                    <label for="n1">Número 1</label>
+                    <input type="number" id="n1">
+                </div>
+                <div class="d-flex flex-column p-3">
+                    <label for="n2">Número 2</label>
+                    <input type="number" id="n2">
+                </div>
+                <div class="d-flex flex-column p-3">
+                    <label for="rs">Resultado</label>
+                    <input type="number" id="rs" disabled>
+                </div>
+            </div>
+            <div>
+                <p></p>
+            </div>
+            <div id="bot" class="p-3">
+                <button class="btn btn-primary m-1" onclick="calc(1)" type="button">
+                    soma
+                </button>
+                <button class="btn btn-primary m-1" onclick="calc(2)" type="button">
+                    subtração
+                </button>
+                <button class="btn btn-primary m-1" onclick="calc(3)" type="button">
+                    Multiplicação
+                </button>
+                <button class="btn btn-primary m-1" onclick="calc(4)" type="button">
+                    Divisão
+                </button>
+            </div>
+        </form>
+        <script>
+            let rs = document.getElementById("rs");
+            let n1 = 0;
+            let n2 = 0;
+            function calc(opc) {
+                pegaVal()
+                if (opc == 1) {
+                    rs.value = som(n1, n2);
+                    return;
+                }
+                if (opc == 2) {
+                    rs.value = sub(n1, n2);
+                    return;
+                }
+                if (opc == 3) {
+                    rs.value = mul(n1, n2);
+                    return;
+                }
+                if (opc == 4) {
+                    rs.value = div(n1, n2);
+                    return;
+                }
+                alert("Erro")
+                return
+            }
+            function pegaVal(){
+                n1 = parseInt(document.getElementById("n1").value);
+                n2 = parseInt(document.getElementById("n2").value);
+            }
+            function som(n1, n2) {
+                return n1 + n2;
+            }
+            function sub(n1, n2) {
+                return n1 - n2;
+            }
+            function mul(n1, n2) {
+                return n1 * n2;
+            }
+            function div(n1, n2) {
+                return n1 / n2;
+            }
+        </script>
+    </div>
+</body>
+
+</html>

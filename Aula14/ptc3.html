@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="index.html"><img src="https://cdn-icons-png.flaticon.com/512/93/93634.png" alt="" width="40vw"></a>
+    <div class="container">
+        <h1>Praticando 3 - JavaScript - Cores</h1>
+        <br>
+        <div class="bot d-flex">
+            <div class="bt col-2" id="gr" onclick="muda('green', true)" onmouseenter="muda('green', false)" onmouseleave="mudar()"></div>
+            <div class="bt col-2" id="rd" onclick="muda('red', true)" onmouseenter="muda('red', false)" onmouseleave="mudar()"></div>
+            <div class="bt col-2" id="bl" onclick="muda('blue', true)" onmouseenter="muda('blue', false)" onmouseleave="mudar()"></div>
+            <div class="bt col-2" id="yl" onclick="muda('yellow', true)" onmouseenter="muda('yellow', false)" onmouseleave="mudar()"></div>
+            <div class="bt col-2" id="ga" onclick="muda('gray', true)" onmouseenter="muda('gray', false)" onmouseleave="mudar()"></div>
+        </div>
+        <button type="button" class="btn btn-dark" onclick="muda('white', true)">
+            Reset
+        </button>
+        <div id="pv">
+
+        </div>
+    </div>
+    <style>
+        .bot div {
+            height: 3vw;
+            border: 0.1vw black solid;
+            margin: 2vw;
+        }
+
+        #gr {
+            background-color: green;
+        }
+
+        #rd {
+            background-color: red;
+        }
+
+        #bl {
+            background-color: blue;
+        }
+
+        #yl {
+            background-color: yellow;
+        }
+
+        #ga {
+            background-color: gray;
+        }
+        #pv{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
+    <script>
+        let background = "white";
+        let pc = document.getElementById("pv");
+        function muda(cor, salvar){
+            document.body.style.backgroundColor = cor;
+            console.log("cor" + cor);
+            if(salvar){
+                background = cor;
+                return
+            }
+            pc.innerHTML = "<h1> PREVIEW </h1>"
+            return
+        }
+        function mudar(){
+            document.body.style.backgroundColor = background;
+            pc.innerHTML = "";
+        }
+    </script>
+</body>
+
+</html>
